@@ -1,0 +1,166 @@
+body {
+    background-image: url("../img/fondo.png");
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.cabecera{
+    margin: auto;
+    width: 91%;
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 3px #000000;
+    border-radius: 20px;
+}
+
+.nombreEmpresa{
+    margin-left: 5%;
+}
+.botonCarrito{
+    margin-top: 8%;
+    text-align: center;
+}
+
+.menu{
+    text-align: center;
+}
+
+.contenedor{
+    margin: auto;
+    width: 91%;
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 3px #000000;
+    border-radius: 20px;
+}
+
+.tituloContenido{
+    margin-left: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.thumbnails{
+    margin: auto;
+    text-align: center;
+}
+
+.detalleProducto{
+    text-align: center;
+}
+
+.contenidoProducto{
+    margin: auto;
+    text-align: center;
+}
+
+.caracteristicasProducto{
+    text-align: left;
+}
+
+.guiaTallas{
+    text-align: left;   
+}
+
+.contenidoCarrito{
+    margin: 2%;
+}
+
+.tablaCarrito{
+    margin:auto;
+    width: 80%;
+    text-align: left;
+    margin-bottom: 5%;
+}
+
+.celdaEspecial{
+    text-align: center;
+}
+
+.tablaFacturacion{
+    margin:auto;
+    width: 90%;
+    margin-left: 8%;
+    text-align: left;
+}
+
+.formularioFacturacion{
+    margin: auto;
+    margin-left: 8%;
+}
+
+.envioIgual{
+    margin: auto;
+    width: 80%;   
+}
+
+#datosEnvio{
+    display: none;
+    padding-top: 3%;
+    margin: auto;
+    margin-left: 8%;
+}
+
+.acuerdoCondiciones{
+    margin: auto;  
+    margin-top: 5%;
+    width: 80%;      
+}
+
+#controlsEnvio{
+    margin: auto;
+    margin-left: 8%;   
+}
+
+#controlsPago{
+    margin-left: 3%;
+}
+
+#costeTotal{
+    text-align: right;
+}
+
+#btnCompletarPedido{
+    text-align: right;   
+}
+
+#tab3{
+    margin-left: 8%;
+}
+
+.tablaFinPedido{
+    margin:auto;
+    width: 100%;
+    text-align: left;
+}
+
+#btnVolverTienda{
+    padding-top: 2%;
+    text-align: right;    
+}
+
+.footer{
+    padding-top: 5%;
+}
+
+.tituloFooter{
+    list-style-type: none;
+    font-size: 0.8em;
+}
+
+.lista{
+    list-style-type: none;
+    font-size: 0.8em;
+}
+
+.iconosSociales{
+    clear: both;
+}
+
+.iconoSocial1{
+    float: left;
+}
+.iconoSocial2{
+    float: left;
+}
+.iconoSocial3{
+    float: left;
+}

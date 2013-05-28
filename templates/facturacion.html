@@ -1,0 +1,413 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Datos de facturación</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="tabbable">
+	<ul class="nav nav-tabs">
+		<li class="active"><a href="#tab1" data-toggle="tab"><h5>1. DATOS DE FACTURA Y ENVÍO</h5></a></li>
+		<li><a href="#tab2" data-toggle="tab"><h5>2. TIPO DE ENVÍO Y FORMA DE PAGO</h5></a></li>
+		<li><a href="#tab3" data-toggle="tab"><h5>3. CONFIRMAR PEDIDO</h5></a></li>
+  	</ul>
+  	<div class="tab-content">
+    	<div class="tab-pane active" id="tab1">
+      		<div class="tituloContenido">
+      			<h4>Contenido del carrito</h4>
+      		</div>
+  			<table class="tablaFacturacion">
+				<thead>
+			        <tr>
+		        	    <th>Producto</th>
+			            <th></th>
+			            <th>Talla</th>
+			            <th>Cantidad</th>
+			            <th></th>
+			            <th>Subtotal</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td>
+			            	<h6>Nombre del diseño - Ref: 0000 - 00.00€</h6>
+			            </td>
+			            <td></td>
+			            <td>XL</td>
+			            <td>00</td>
+			            <td></td>
+			            <td>00.00€</td>
+			        </tr>
+			        <tr>
+			            <td>
+			            	<h6>Nombre del diseño - Ref: 0000 - 00.00€</h6>
+			            </td>
+			            <td></td>
+			            <td>XL</td>
+			            <td>00</td>
+			            <td></td>
+			            <td>00.00€</td>
+			        </tr><tr>
+			            <td>
+			            	<h6>Nombre del diseño - Ref: 0000 - 00.00€</h6>
+			            </td>
+			            <td></td>
+			            <td>XL</td>
+			            <td>00</td>
+			            <td></td>
+			            <td>00.00€</td>
+			        </tr>
+			        <tr>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td><h4>00.00€</h4></td>
+			        </tr>
+			        <tr>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td class="celdaEspecial"><h6>+IVA (21%)</h6></td>
+			            <td><h4>00.00€</h4></td>
+			        </tr>
+			        <tr>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td class="celdaEspecial"><h6>TOTAL:</h6></td>
+			            <td><h4>00.00€</h4></td>
+			        </tr>
+			    </tbody>
+			</table>
+			<div class="tituloContenido">
+				<h4>Datos de facturación</h4>
+			</div>
+			<div class="formularioFacturacion">
+				<div class="row-fluid">
+			    	<div class="span4">
+			    		Nombre*:<br>
+			    		<input type="text" placeholder="Nombre">
+			    	</div>
+			    	<div class="span4">
+			    		Apellidos*:<br>
+			    		<input type="text" placeholder="Apellidos">
+			    	</div>
+			    	<div class="span4">
+			    		Email*:<br>
+			    		<input type="text" placeholder="Email">
+			    	</div>
+			    </div>
+				<div class="row-fluid">
+			    	<div class="span4">
+			    		Dirección*:<br>
+			    		<input type="text" placeholder="Dirección">
+			    	</div>
+			    	<div class="span4">
+			    		Ciudad/Población*:<br>
+			    		<input type="text" placeholder="Ciudad/Población">
+			    	</div>
+			    	<div class="span4">
+			    		Código postal*:<br>
+			    		<input type="text" placeholder="Código postal">
+			    	</div>
+			    </div>
+			    <div class="row-fluid">
+			    	<div class="span4">
+			    		Provincia*:<br>
+			    		<input type="text" placeholder="Provincia">
+			    	</div>
+			    	<div class="span4">
+			    		Teléfono*:<br>
+			    		<input type="text" placeholder="Teléfono">
+			    	</div>
+			    	<div class="span4">
+			    		DNI (opcional):<br>
+			    		<input type="text" placeholder="DNI">
+			    	</div>
+			    </div>
+	    	</div>
+	    	<div class="tituloContenido"><h4>Dirección de envío</h4></div>
+	    	<div class="envioIgual">
+	    		<label class="checkbox"><input id="check" type="checkbox" checked onchange="showContent()">Igual que la dirección de facturación</label>
+	    	</div>
+	    	<div id="datosEnvio">
+	    		<div class="row-fluid">
+			    	<div class="span4">
+			    		Nombre*:<br>
+			    		<input type="text" placeholder="Nombre">
+			    	</div>
+			    	<div class="span4">
+			    		Apellidos*:<br>
+			    		<input type="text" placeholder="Apellidos">
+			    	</div>
+			    	<div class="span4">
+			    		Email*:<br>
+			    		<input type="text" placeholder="Email">
+			    	</div>
+			    </div>
+				<div class="row-fluid">
+			    	<div class="span4">
+			    		Dirección*:<br>
+			    		<input type="text" placeholder="Dirección">
+			    	</div>
+			    	<div class="span4">
+			    		Ciudad/Población*:<br>
+			    		<input type="text" placeholder="Ciudad/Población">
+			    	</div>
+			    	<div class="span4">
+			    		Código postal*:<br>
+			    		<input type="text" placeholder="Código postal">
+			    	</div>
+			    </div>
+			    <div class="row-fluid">
+			    	<div class="span4">
+			    		Provincia*:<br>
+			    		<input type="text" placeholder="Provincia">
+			    	</div>
+			    	<div class="span4">
+			    		Teléfono*:<br>
+			    		<input type="text" placeholder="Teléfono">
+			    	</div>
+			    </div>
+	    	</div>
+	    	<div class="acuerdoCondiciones"><p>Al tramitar el pedido se da por sentado que acepta la <b>Política de Privacidad</b> y las <b>Condiciones de compra</b>.</p></div>
+	    	<div class="row-fluid">
+            	<div class="span3 offset8" id="btnCompletarPedido">
+            		<button class="btn btn-large btn-success">Completar pedido</button>
+            	</div>
+            </div>
+	    </div>
+	    <div class="tab-pane" id="tab2">
+	      <div class="tituloContenido">
+      			<h4>Contenido del carrito</h4>
+      		</div>
+  			<table class="tablaFacturacion">
+				<thead>
+			        <tr>
+		        	    <th>Producto</th>
+			            <th></th>
+			            <th>Talla</th>
+			            <th>Cantidad</th>
+			            <th></th>
+			            <th>Subtotal</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td>
+			            	<h6>Nombre del diseño - Ref: 0000 - 00.00€</h6>
+			            </td>
+			            <td></td>
+			            <td>XL</td>
+			            <td>00</td>
+			            <td></td>
+			            <td>00.00€</td>
+			        </tr>
+			        <tr>
+			            <td>
+			            	<h6>Nombre del diseño - Ref: 0000 - 00.00€</h6>
+			            </td>
+			            <td></td>
+			            <td>XL</td>
+			            <td>00</td>
+			            <td></td>
+			            <td>00.00€</td>
+			        </tr><tr>
+			            <td>
+			            	<h6>Nombre del diseño - Ref: 0000 - 00.00€</h6>
+			            </td>
+			            <td></td>
+			            <td>XL</td>
+			            <td>00</td>
+			            <td></td>
+			            <td>00.00€</td>
+			        </tr>
+			        <tr>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td><h4>00.00€</h4></td>
+			        </tr>
+			        <tr>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td class="celdaEspecial"><h6>+IVA (21%)</h6></td>
+			            <td><h4>00.00€</h4></td>
+			        </tr>
+			        <tr>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td class="celdaEspecial"><h6>TOTAL:</h6></td>
+			            <td><h4>00.00€</h4></td>
+			        </tr>
+			    </tbody>
+			</table>
+			<div class="tituloContenido"><h4>Tipo de envío</h4></div>
+			<div class="row-fluid">
+				<div class="span4">
+					<div class="controls" id="controlsEnvio">
+		              <label class="radio">
+		                <input type="radio" name="opcionEnvio" id="opcionEnvio1" value="option1" checked>
+		                Por correo ordinario (CHRONOEXPRESS) - 	3.5€
+		              </label>
+		              <label class="radio">
+		                <input type="radio" name="opcionEnvio" id="opcionEnvio2" value="option2">
+		                Por mensajería (MRW, SEUR, NACEX) - 6€
+		              </label>
+		            </div>
+	            </div>
+	            <div class="span2 offset5" id="costeTotal">
+	            	Coste de envío: <b>0.00€</b>
+	            	<br>
+	            	<h4>Total Pedido: 00.00€</h4>
+	            </div>
+            </div>
+            <div class="tituloContenido"><h4>Forma de pago</h4></div>
+			<div class="controls" id="controlsPago">
+              <label class="radio">
+                <input type="radio" name="opcionPago" id="opcionPago1" value="option1" checked>
+                Tarjeta
+              </label>
+              <label class="radio">
+                <input type="radio" name="opcionPago" id="opcionPago2" value="option2">
+                Pago por transferencia bancaria (el pedido se tramitará una vez recibido el cobro)
+              </label>
+            </div>
+            <div class="row-fluid">
+            	<div class="span3 offset8" id="btnCompletarPedido">
+            		<button class="btn btn-large btn-success">Completar pedido</button>
+            	</div>
+            </div>
+	    </div>
+	    <div class="tab-pane" id="tab3">
+	    	<p>Tu pedido se ha completado correctamente. En breve recibirás un e-mail con la información al detalle.<br>
+    		Ya solo falta que realices el pago mediante transferencia y tu pedido se hará efectivo.<br><br>
+    		A continuación te facilitamos los datos necesarios para que realices la transferencia:<br><br>
+    		-Importe: <b>00.00€</b><br>
+    		-Concepto/Objeto de la transferencia: <b>#000000</b> (Corresponde al ID de tu pedido)<br>
+    		-A la entidad bancaria: <b>CAJAMAR</b><br>
+    		-Nº de cuenta: <b>0000 0000 00 0000000000</b><br><br>
+    		Te recordamos que tu pedido será tramitado solamente una vez recibido el pago.<br>
+    		(La transferencia suele hacerse efectiva en un plazo de 24-72 horas).<br><br>
+    		Te recomendamos que imprimas o guardes esta página para posibles consultas o aclaraciones sobre tu pedido.<br><br>
+	    	Los datos de tu pedido:<br><br>
+	    	Nº pedido/ID del pedido: 000000<br>
+	    	Fecha: 00/00/0000 00:00:00<br>
+	    	Forma de pago: Transferencia bancaria<br><br>
+	    	<b>Dirección de facturación:</b><br>
+	    	Nombre: Nombre Apellidos<br>
+	    	Dirección: Nombre de la Calle, nº00<br>
+	    	Ciudad/Población: Almería<br>
+	    	Provincia: Almería<br>
+	    	Código postal: 00000<br><br>
+	    	<b>Dirección de envío:</b><br>
+	    	Nombre: Nombre Apellidos<br>
+	    	Dirección: Nombre de la Calle, nº00<br>
+	    	Ciudad/Población: Almería<br>
+	    	Provincia: Almería<br>
+	    	Código postal: 00000<br><br>
+	    	<b>Tu pedido:</b>
+	    	</p>
+	    	<table class="tablaFinPedido">
+				<thead>
+			        <tr>
+		        	    <th>Producto</th>
+			            <th></th>
+			            <th>Talla</th>
+			            <th>Cantidad</th>
+			            <th></th>
+			            <th>Subtotal</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr>
+			            <td>
+			            	<h6>Nombre del diseño - Ref: 0000 - 00.00€</h6>
+			            </td>
+			            <td></td>
+			            <td>XL</td>
+			            <td>00</td>
+			            <td></td>
+			            <td>00.00€</td>
+			        </tr>
+			        <tr>
+			            <td>
+			            	<h6>Nombre del diseño - Ref: 0000 - 00.00€</h6>
+			            </td>
+			            <td></td>
+			            <td>XL</td>
+			            <td>00</td>
+			            <td></td>
+			            <td>00.00€</td>
+			        </tr><tr>
+			            <td>
+			            	<h6>Nombre del diseño - Ref: 0000 - 00.00€</h6>
+			            </td>
+			            <td></td>
+			            <td>XL</td>
+			            <td>00</td>
+			            <td></td>
+			            <td>00.00€</td>
+			        </tr>
+			        <tr>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td><h4>00.00€</h4></td>
+			        </tr>
+			        <tr>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td class="celdaEspecial"><h6>+IVA (21%)</h6></td>
+			            <td><h4>00.00€</h4></td>
+			        </tr>
+			        <tr>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td class="celdaEspecial"><h6>Total:</h6></td>
+			            <td><h4>00.00€</h4></td>
+			        </tr>
+			        <tr>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td class="celdaEspecial"><h6>Coste de envío:</h6></td>
+			            <td><h4>00.00€</h4></td>
+			        </tr>
+			        <tr>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td></td>
+			            <td class="celdaEspecial"><h6>Total Pedido:</h6></td>
+			            <td><h4>00.00€</h4></td>
+			        </tr>
+			    </tbody>
+			</table>
+			<div class="row-fluid">
+            	<div class="span3 offset8" id="btnVolverTienda">
+            		<button class="btn btn-large">Volver a la tienda</button>
+            	</div>
+            </div>
+	    </div>
+  	</div>
+</div>
+{% endblock %}

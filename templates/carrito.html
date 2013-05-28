@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Carrito</title>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="tituloContenido">
+	<h4>Contenido del carrito</h4>
+</div>
+<div class="contenidoCarrito">
+	<table class="tablaCarrito">
+		<thead>
+	        <tr>
+        	    <th>Producto</th>
+	            <th></th>
+	            <th>Talla</th>
+	            <th>Cantidad</th>
+	            <th>Subtotal</th>
+	            <th></th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td><img src="./img/80.png"></td>
+	            <td>
+	            	<h5>Nombre del diseño</h5>
+					<h6>Ref: 0000</h6>
+					<p>Datos sobre la camiseta</p>
+					<h6>00.00€</h6>
+	            </td>
+	            <td>XL</td>
+	            <td>00</td>
+	            <td>00.00€</td>
+	            <td><button class="btn btn-mini btn-danger"</button>X</td>
+	        </tr>
+	        <tr>
+	            <td><img src="./img/80.png"></td>
+	            <td>
+	            	<h5>Nombre del diseño</h5>
+					<h6>Ref: 0000</h6>
+					<p>Datos sobre la camiseta</p>
+					<h6>00.00€</h6>
+	            </td>
+	            <td>XL</td>
+	            <td>00</td>
+	            <td>00.00€</td>
+	            <td><button class="btn btn-mini btn-danger"</button>X</td>
+	        </tr>
+	        <tr>
+	            <td><img src="./img/80.png"></td>
+	            <td>
+	            	<h5>Nombre del diseño</h5>
+					<h6>Ref: 0000</h6>
+					<p>Datos sobre la camiseta</p>
+					<h6>00.00€</h6>
+	            </td>
+	            <td>XL</td>
+	            <td>00</td>
+	            <td>00.00€</td>
+	            <td><button class="btn btn-mini btn-danger"</button>X</td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td><h4>00.00€</h4></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td class="celdaEspecial"><h6>+IVA (21%)</h6></td>
+	            <td><h4>00.00€</h4></td>
+	            <td></td>
+	        </tr>
+	        <tr>
+	            <td></td>
+	            <td></td>
+	            <td></td>
+	            <td class="celdaEspecial"><h6>TOTAL:</h6></td>
+	            <td><h4>00.00€</h4></td>
+	            <td></td>
+	        </tr>
+	    </tbody>
+	</table>
+	<div class"botonesCarrito">
+		<div class="row-fluid">
+			<div class="span2 offset7"><button class="btn">Seguir comprando</button></div>
+			<div class="span2"><a href="./facturacion"><button class="btn btn-primary">Confirmar pedido</button></a></div>
+		</div>
+	</div>
+</div>
+{% endblock %}

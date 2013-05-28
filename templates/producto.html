@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}
+<title>Producto</title>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="tituloContenido">
+	<h4>Categoría</h4>
+</div>
+<div class="contenidoProducto">
+	<div class="row-fluid">
+	    <div class="span5">
+	        <div class="imagenProducto">
+				<img class="img-rounded" src="./img/350.png">
+			</div>
+	    </div>
+	    <div class="span3">
+	        <div class="caracteristicasProducto">
+				<h4>Nombre del producto</h4>
+				<h5>Ref: 0000</h5>
+				<p>Datos sobre la camiseta</p>
+				<h3>00.00€ + IVA</h3>
+				<h5>Elige talla:</h5>
+				<select>
+					<option>S</option>
+					<option>M</option>
+					<option>L</option>
+					<option>XL</option>
+					<option>XXL</option>
+				</select>
+				<h5>Cantidad:</h5>
+				<input type="text" placeholder="Cantidad">
+				<br>
+				<btn class="btn btn-primary">Añadir al carrito</btn>
+			</div>
+	    </div>
+	    <div class="span4">
+	        <div class="guiaTallas">
+				<h5>Relación Talla - Medidas (alto x ancho)</h5>
+				<br>
+				<h5>S    -    00 x 00cm</h5>
+				<h5>M    -    00 x 00cm</h5>
+				<h5>L    -    00 x 00cm</h5>
+				<h5>XL   -    00 x 00cm</h5>
+				<h5>XXL  -    00 x 00cm</h5>
+			</div>
+	    </div>
+	</div>
+</div>
+{% endblock %}
